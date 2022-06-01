@@ -1,9 +1,10 @@
 set tabstop=2
 set expandtab
+syntax on
 colorscheme murphy
 set nocompatible
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-l> :tabnext<CR>
+"nnoremap <C-h> :tabprevious<CR>
+"nnoremap <C-l> :tabnext<CR>
 "set undodir=~/.vim/undodir
 "set undofile
 " Enables filetype detection, loads ftplugin, and loads indent
@@ -24,3 +25,11 @@ set wildmenu
 " TAG jumping
 " Create tags file
 command! MakeTags !ctags -R .
+
+" Enable the list of buffers
+"let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+"let g:airline#extensions#tabline#fnamemod = ':t'
+
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gr <Plug>(coc-references)
