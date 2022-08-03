@@ -26,10 +26,3 @@ set wildmenu
 " Create tags file
 command! MakeTags !ctags -R .
 
-" Enable the list of buffers
-"let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-"let g:airline#extensions#tabline#fnamemod = ':t'
-
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> gr <Plug>(coc-references)
