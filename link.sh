@@ -1,8 +1,12 @@
 #!/bin/bash
 
-rm ~/.vimrc
-rm ~/.tmux.conf
-rm ~/.config/nvim/init.*
-ln -s $(pwd)/.tmux.conf ~/.tmux.conf
-ln -s $(pwd)/.vimrc ~/.vimrc
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+rm ~/.vimrc || true
+rm ~/.tmux.conf || true
+rm ~/.config/nvim/init.* || true
+rm ~/.zshrc || true
+ln -s $(pwd)/tmux.conf ~/.tmux.conf
+ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/init.lua ~/.config/nvim/init.lua
+ln -s $(pwd)/zshrc ~/.zshrc
