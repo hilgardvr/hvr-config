@@ -13,9 +13,7 @@ vim.keymap.set('n', 'Y', 'Y')
 -- Navigation
 vim.keymap.set('n', '<C-]>', '<Plug>(coc-definition)')
 vim.keymap.set('n', 'gr', '<Plug>(coc-references)')
-vim.cmd [[colorscheme dracula]]
-    
-	
+--vim.cmd [[colorscheme dracula]]
 
 -- file searching with ack
 -- vim.keymap.set('n', '<C-f>', ':Ack! ')
