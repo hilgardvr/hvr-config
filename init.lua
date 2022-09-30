@@ -13,7 +13,6 @@ vim.keymap.set('n', 'Y', 'Y')
 -- Navigation
 vim.keymap.set('n', '<C-]>', '<Plug>(coc-definition)')
 vim.keymap.set('n', 'gr', '<Plug>(coc-references)')
---vim.cmd [[colorscheme dracula]]
 
 -- file searching with ack
 -- vim.keymap.set('n', '<C-f>', ':Ack! ')
@@ -29,5 +28,6 @@ Plug('junegunn/fzf', {['do'] = vim.fn['fzf#install(}']})
 Plug('junegunn/fzf.vim')
 Plug('tpope/vim-fugitive')
 Plug('preservim/nerdtree')
+Plug('fatih/vim-go', {['do'] = vim.fn[':GoUpdateBinaries'] })
 Plug('dracula/vim')
 vim.call('plug#end')
