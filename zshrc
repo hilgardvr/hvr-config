@@ -79,6 +79,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 alias vi="nvim"
+alias connect_bastion="sshuttle -r bastion@13.246.49.159 -v govtest.qlink.co.za" # --ssh-cmd 'ssh -i ~/.ssh/id_rsa'"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -103,3 +104,11 @@ alias vi="nvim"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
