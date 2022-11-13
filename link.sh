@@ -7,6 +7,7 @@ rm ~/.tmux.conf || true
 rm ~/.config/nvim/init.* || true
 rm ~/.zshrc || true
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
+mkdir -p ~/.config/nvim/
 ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/init.lua ~/.config/nvim/init.lua
 ln -s $(pwd)/zshrc ~/.zshrc
