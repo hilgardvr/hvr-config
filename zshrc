@@ -127,3 +127,6 @@ case ":$PATH:" in
         export PATH="$PATH:/home/hilgard/.ghcup/bin"
         ;;
 esac
+
+alias saw='docker run -it --rm --env-file ~/.aws/saw-env tbrock/saw'
+#. "$HOME/.cargo/env"
