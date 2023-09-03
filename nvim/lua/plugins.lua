@@ -54,6 +54,10 @@ return require('packer').startup(function(use)
     use { 'Mofiqul/dracula.nvim', as = 'dracula'}
 
 
+    -- Search
+    use 'junegunn/fzf'
+
+
     -- lsp manager
     use { 'williamboman/mason.nvim' }
     use { 'williamboman/mason-lspconfig.nvim'}
