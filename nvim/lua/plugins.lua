@@ -57,6 +57,8 @@ return require('packer').startup(function(use)
     -- Search
     use 'junegunn/fzf'
 
+    -- Git blame
+    use { 'FabijanZulj/blame.nvim' }
 
     -- lsp manager
     use { 'williamboman/mason.nvim' }
