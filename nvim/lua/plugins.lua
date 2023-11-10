@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
     --
     -- Colorschemes
     use { 'Mofiqul/dracula.nvim', as = 'dracula'}
-
+    use 'tanvirtin/monokai.nvim'
 
     -- Search
     use 'junegunn/fzf'

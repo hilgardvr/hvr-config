@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/onespark/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/onespark/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/onespark/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/onespark/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/onespark/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/hilgard/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/hilgard/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/hilgard/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/hilgard/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/hilgard/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,87 +76,92 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["blame.nvim"] = {
     loaded = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/blame.nvim",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/blame.nvim",
     url = "https://github.com/FabijanZulj/blame.nvim"
   },
   ["cmp-buffer"] = {
-    after_files = { "/home/onespark/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
+    after_files = { "/home/hilgard/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/opt/cmp-buffer",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/opt/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-cmdline"] = {
-    after_files = { "/home/onespark/.local/share/nvim/site/pack/packer/opt/cmp-cmdline/after/plugin/cmp_cmdline.lua" },
+    after_files = { "/home/hilgard/.local/share/nvim/site/pack/packer/opt/cmp-cmdline/after/plugin/cmp_cmdline.lua" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/opt/cmp-cmdline",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/opt/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
-    after_files = { "/home/onespark/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua" },
+    after_files = { "/home/hilgard/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-path"] = {
-    after_files = { "/home/onespark/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
+    after_files = { "/home/hilgard/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/opt/cmp-path",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/opt/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   dracula = {
     loaded = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/dracula",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/dracula",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
   fzf = {
     loaded = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/fzf",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["monokai.nvim"] = {
+    loaded = true,
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/monokai.nvim",
+    url = "https://github.com/tanvirtin/monokai.nvim"
+  },
   ["nvim-cmp"] = {
-    after = { "cmp-cmdline", "cmp-nvim-lsp", "cmp-path", "cmp-buffer" },
+    after = { "cmp-path", "cmp-buffer", "cmp-nvim-lsp", "cmp-cmdline" },
     config = { "require('config.nvim-cmp')" },
     loaded = true,
     only_config = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/onespark/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   }
 }
@@ -169,9 +174,9 @@ time([[Config for nvim-cmp]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd cmp-nvim-lsp ]]
-vim.cmd [[ packadd cmp-cmdline ]]
-vim.cmd [[ packadd cmp-path ]]
 vim.cmd [[ packadd cmp-buffer ]]
+vim.cmd [[ packadd cmp-path ]]
+vim.cmd [[ packadd cmp-cmdline ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
