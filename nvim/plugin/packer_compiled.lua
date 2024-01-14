@@ -131,6 +131,11 @@ _G.packer_plugins = {
     path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
   },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -147,7 +152,7 @@ _G.packer_plugins = {
     url = "https://github.com/tanvirtin/monokai.nvim"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-path", "cmp-buffer", "cmp-nvim-lsp", "cmp-cmdline" },
+    after = { "cmp-cmdline", "cmp-nvim-lsp", "cmp-path", "cmp-buffer" },
     config = { "require('config.nvim-cmp')" },
     loaded = true,
     only_config = true,
@@ -163,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["vim-mustache-handlebars"] = {
+    loaded = true,
+    path = "/home/hilgard/.local/share/nvim/site/pack/packer/start/vim-mustache-handlebars",
+    url = "https://github.com/mustache/vim-mustache-handlebars"
   }
 }
 
@@ -173,10 +183,10 @@ require('config.nvim-cmp')
 time([[Config for nvim-cmp]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd cmp-nvim-lsp ]]
-vim.cmd [[ packadd cmp-buffer ]]
-vim.cmd [[ packadd cmp-path ]]
 vim.cmd [[ packadd cmp-cmdline ]]
+vim.cmd [[ packadd cmp-buffer ]]
+vim.cmd [[ packadd cmp-nvim-lsp ]]
+vim.cmd [[ packadd cmp-path ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false

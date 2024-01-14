@@ -56,6 +56,7 @@ return require('packer').startup(function(use)
 
     -- Search
     use 'junegunn/fzf'
+    use 'junegunn/fzf.vim'
 
     -- Git blame
     use { 'FabijanZulj/blame.nvim' }
@@ -63,6 +64,9 @@ return require('packer').startup(function(use)
     -- lsp manager
     use { 'williamboman/mason.nvim' }
     use { 'williamboman/mason-lspconfig.nvim'}
+
+    --mustache
+    use 'mustache/vim-mustache-handlebars'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
