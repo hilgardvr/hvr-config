@@ -68,6 +68,9 @@ return require('packer').startup(function(use)
     --mustache
     use 'mustache/vim-mustache-handlebars'
 
+    --dadbod
+    use 'tpope/vim-dadbod'
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
