@@ -10,7 +10,7 @@ require('mason').setup({
 
 require('mason-lspconfig').setup({
     -- A list of servers to automatically install if they're not already installed
-    ensure_installed = { 'gopls', 'lua_ls', 'rust_analyzer', 'hls','kotlin_language_server', 'tsserver'},
+    ensure_installed = { 'gopls', 'hls','kotlin_language_server', 'tsserver'}, --'lua_ls', 'rust_analyzer', 
 })
 
 -- Set different settings for different languages' LSP
@@ -67,6 +67,8 @@ lspconfig.rust_analyzer.setup({
 
 lspconfig.kotlin_language_server.setup({
     on_attach = on_attach,
+    flags = flags,
+    capabilities = capabilities,
 })
 
 lspconfig.tsserver.setup({

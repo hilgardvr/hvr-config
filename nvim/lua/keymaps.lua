@@ -8,6 +8,7 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
-
 vim.keymap.set('n', '<C-p>', ':FZF<CR>', opts)
 vim.keymap.set('n', '<C-f>', ':Rg<CR>', opts)
+vim.keymap.set('n', '<A-b>', ':Buffers<CR>', opts)
+
