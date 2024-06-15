@@ -12,6 +12,22 @@ local ensure_packer = function()
 end
 local packer_bootstrap = ensure_packer()
 
+local dap, dapui = require("dap"), require("dapui")
+dap.listeners.before.attach.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.launch.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated.dapui_config = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited.dapui_config = function()
+  dapui.close()
+end
+
+require("dap-go").setup()
+require("dapui").setup()
 
 -- Reload configurations if we modify plugins.lua
 -- Hint
@@ -70,6 +86,16 @@ return require('packer').startup(function(use)
 
     --dadbod
     use 'tpope/vim-dadbod'
+
+    --dap
+    use 'mfussenegger/nvim-dap'
+    use 'leoluz/nvim-dap-go'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+    --rust dap
+    use 'nvim-lua/plenary.nvim'
+
+    --rust
+    use "simrat39/rust-tools.nvim"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
