@@ -113,8 +113,28 @@ alias saw='docker run -it --rm --env-file ~/.aws/saw-env tbrock/saw'
 alias vim="nvim"
 alias vi="nvim"
 alias connect_bastion="sshuttle -r bastion@13.246.49.159 -v govtest.qlink.co.za" # --ssh-cmd 'ssh -i ~/.ssh/id_rsa'"
+alias connect_bastion_rp="sshuttle -r bastion@13.246.49.159 -v realpaycollect.com:4448"
+alias connect_openvpn3="openvpn3 session-start --config ~/.sso-user.ovpn"
+alias disconnect_openvpn3="openvpn3 session-manage --config ~/.sso-user.ovpn --disconnect"
+alias aws-profile="aws s3 ls --profile OneSparkDeveloper-150106840756"
+alias connect_cloud_db="kubectl port-forward service/aurora-non-prod-rds 5999:5432 -n development"
+alias aws_login="aws sso login"
+alias get_pods="kubectl get pods -n admin-system-dev"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# pnpm
+export PNPM_HOME="/home/dev003/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH=/home/dev003/bin:$PATH
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export PATH=$PATH:/home/dev003/.kubectl/
+
+export AWS_PROFILE=OneSparkDeveloper-150106840756
