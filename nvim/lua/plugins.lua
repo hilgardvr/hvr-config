@@ -12,23 +12,6 @@ local ensure_packer = function()
 end
 local packer_bootstrap = ensure_packer()
 
---local dap, dapui = require("dap"), require("dapui")
---dap.listeners.before.attach.dapui_config = function()
---  dapui.open()
---end
---dap.listeners.before.launch.dapui_config = function()
---  dapui.open()
---end
---dap.listeners.before.event_terminated.dapui_config = function()
---  dapui.close()
---end
---dap.listeners.before.event_exited.dapui_config = function()
---  dapui.close()
---end
---
---require("dap-go").setup()
---require("dapui").setup()
-
 -- Reload configurations if we modify plugins.lua
 -- Hint
 --     <afile> - replaced with the filename of the buffer being manipulated
