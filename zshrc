@@ -111,13 +111,13 @@ esac
 
 alias saw='docker run -it --rm --env-file ~/.aws/saw-env tbrock/saw'
 alias vim="nvim"
-alias vi="nvim"
+#alias vi="nvim"
 alias connect_bastion="sshuttle -r bastion@13.246.49.159 -v govtest.qlink.co.za" # --ssh-cmd 'ssh -i ~/.ssh/id_rsa'"
 alias connect_bastion_rp="sshuttle -r bastion@13.246.49.159 -v realpaycollect.com:4448"
 alias connect_openvpn3="openvpn3 session-start --config ~/.sso-user.ovpn"
 alias disconnect_openvpn3="openvpn3 session-manage --config ~/.sso-user.ovpn --disconnect"
 alias aws-profile="aws s3 ls --profile OneSparkDeveloper-150106840756"
-alias connect_cloud_db="kubectl port-forward service/aurora-non-prod-rds 5999:5432 -n development"
+alias connect_cloud_dev_db="kubectl port-forward service/aurora-non-prod-rds 5999:5432 -n development"
 alias aws_login="aws sso login"
 alias get_pods="kubectl get pods -n admin-system-dev"
 
