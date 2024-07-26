@@ -118,8 +118,11 @@ alias connect_openvpn3="openvpn3 session-start --config ~/.sso-user.ovpn"
 alias disconnect_openvpn3="openvpn3 session-manage --config ~/.sso-user.ovpn --disconnect"
 alias aws-profile="aws s3 ls --profile OneSparkDeveloper-150106840756"
 alias connect_cloud_dev_db="kubectl port-forward service/aurora-non-prod-rds 5999:5432 -n development"
-alias aws_login="aws sso login"
+alias connect_aws_login="aws sso login"
 alias get_pods="kubectl get pods -n admin-system-dev"
+alias logs_policy_staging="kubectl logs -f deployment/policy-service -n staging"
+alias logs_iam_staging="kubectl logs -f deployment/iam-service -n staging"
+alias logs_gateway_staging="kubectl logs -f deployment/gateway-service -n staging"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
