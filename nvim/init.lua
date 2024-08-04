@@ -97,6 +97,11 @@ vim.g.have_nerd_font = false
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
+--
+vim.opt.tabstop = 4 -- TAB to spaces
+vim.opt.expandtab = true
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 
 -- Make line numbers default
 vim.opt.number = true
@@ -155,7 +160,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 7
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -656,11 +661,12 @@ require("lazy").setup({
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
 				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
-				return {
-					timeout_ms = 500,
-					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
-				}
+				return
+				-- local disable_filetypes = { c = true, cpp = true, hls = true }
+				-- return {
+				-- 	timeout_ms = 500,
+				-- 	lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
+				-- }
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
@@ -740,7 +746,7 @@ require("lazy").setup({
 					-- Accept ([y]es) the completion.
 					--  This will auto-import if your LSP supports it.
 					--  This will expand snippets if the LSP sent a snippet.
-					["<C-y>"] = cmp.mapping.confirm({ select = true }),
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
 
 					-- If you prefer more traditional completion keymaps,
 					-- you can uncomment the following lines
