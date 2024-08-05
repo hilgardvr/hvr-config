@@ -593,6 +593,7 @@ require("lazy").setup({
 				--
 				hls = {},
 				kotlin_language_server = {},
+        ocamllsp = {},
 
 				lua_ls = {
 					-- cmd = {...},
