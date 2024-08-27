@@ -589,11 +589,11 @@ require("lazy").setup({
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`tsserver`) will work just fine
-				-- tsserver = {},
+				tsserver = {},
 				--
 				-- hls = {},
-				-- kotlin_language_server = {},
-        -- ocamllsp = {},
+				kotlin_language_server = {},
+				-- ocamllsp = {},
 
 				lua_ls = {
 					-- cmd = {...},
