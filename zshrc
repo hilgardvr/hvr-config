@@ -84,11 +84,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vi'
+else
+  export EDITOR='vi'
+fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -114,15 +114,23 @@ alias vim="nvim"
 #alias vi="nvim"
 alias connect_bastion="sshuttle -r bastion@13.246.49.159 -v govtest.qlink.co.za" # --ssh-cmd 'ssh -i ~/.ssh/id_rsa'"
 alias connect_bastion_rp="sshuttle -r bastion@13.246.49.159 -v realpaycollect.com:4448"
+
 alias connect_openvpn3="openvpn3 session-start --config ~/.sso-user.ovpn"
 alias disconnect_openvpn3="openvpn3 session-manage --config ~/.sso-user.ovpn --disconnect"
-alias aws-profile="aws s3 ls --profile OneSparkDeveloper-150106840756"
-alias connect_cloud_dev_db="kubectl port-forward service/aurora-non-prod-rds 5999:5432 -n development"
+#alias aws-profile="aws s3 ls --profile OneSparkDeveloper-150106840756"
+
+alias aws_configure="aws configure sso"
 alias connect_aws_login="aws sso login"
-alias get_pods="kubectl get pods -n admin-system-dev"
-alias logs_policy_staging="kubectl logs -f deployment/policy-service -n staging"
-alias logs_iam_staging="kubectl logs -f deployment/iam-service -n staging"
-alias logs_gateway_staging="kubectl logs -f deployment/gateway-service -n staging"
+alias prod_kubectl="aws eks update-kubeconfig --region af-south-1 --name onespark-prod"
+alias dev_kubectl="aws eks update-kubeconfig --region af-south-1 --name onespark-dev"
+alias connect_cloud_dev_db="kubectl port-forward service/aurora-non-prod-rds 5999:5432 -n development"
+alias connect_cloud_prod_db="kubectl port-forward service/aurora-prod-rds 5999:5432 -n operations"
+
+alias watch_get_pods_dev="watch kubectl get pods -n admin-system-dev"
+alias get_pods_dev="kubectl get pods -n admin-system-dev"
+alias get_pods_staging="kubectl get pods -n staging"
+alias logs_policy_dev="kubectl logs -f deployment/policy-service -n admin-system-dev"
+alias logs_policy_staging="kubectl logs -f deployment/policy-service -n admin-system-staging"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -139,5 +147,8 @@ export PATH=/home/dev003/bin:$PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export PATH=$PATH:/home/dev003/.kubectl/
+export KUBE_EDITOR=nano
 
 export AWS_PROFILE=OneSparkDeveloper-150106840756
+
+export PATH=$PATH:/home/dev003/.local/share/JetBrains/idea-IU-242.23726.103/bin/
