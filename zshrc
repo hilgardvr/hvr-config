@@ -129,8 +129,10 @@ alias connect_cloud_prod_db="kubectl port-forward service/aurora-prod-rds 5999:5
 alias watch_get_pods_dev="watch kubectl get pods -n admin-system-dev"
 alias get_pods_dev="kubectl get pods -n admin-system-dev"
 alias get_pods_staging="kubectl get pods -n staging"
-alias logs_policy_dev="kubectl logs -f deployment/policy-service -n admin-system-dev"
-alias logs_policy_staging="kubectl logs -f deployment/policy-service -n admin-system-staging"
+alias logs_policy_dev="kubectl logs deployment/policy-service -n admin-system-dev"
+alias logs_policy_dev_follow="kubectl logs -f deployment/policy-service -n admin-system-dev"
+alias logs_policy_staging="kubectl logs deployment/policy-service -n admin-system-staging"
+alias logs_policy_prod="kubectl logs deployment/policy-service -n admin-system"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

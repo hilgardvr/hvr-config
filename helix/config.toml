@@ -1,0 +1,3 @@
+[keys.normal]
+C-y = "scroll_up"
+C-e = "scroll_down"
